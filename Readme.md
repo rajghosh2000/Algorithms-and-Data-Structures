@@ -1,3 +1,9 @@
 # Data Structures in C
 ---
-#### This repo contains the data structures I've learnt so far and implemented into programs.
+### Collection of Elementary Data Structures coded in c.
+ - Stacks
+ - queues
+ - linked lists
+    - single linked list 
+    - double linked list 
+    - circular linked list
