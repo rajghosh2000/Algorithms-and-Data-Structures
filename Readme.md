@@ -1,6 +1,6 @@
 # Data Structures in C
 ---
-### Collection of Elementary Data Structures coded in c.
+### Collection of Elementary Data Structures coded in c:
  - Stacks
  - queues
  - linked lists
