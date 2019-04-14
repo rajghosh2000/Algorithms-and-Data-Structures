@@ -1,5 +1,13 @@
 #include<stdio.h>
 #define count 10
+/*
+
+The current problems in the program is , 
+	1.we have to give the array in the starting of the program.
+	(Implement something to take the input of the array as the file)
+	2. The array should be in sorted order.So,We have to implement a sorting function.
+
+*/
 
 //......................binary_search.............................//
 int binary_search(int arr[], int low, int high, int key){
@@ -37,6 +45,7 @@ for (int i = 0; i < count; ++i)
 }
 printf("\nEnter the value to search for: \t");
 scanf("%d", &key);
-int result = binary_search(arr , 0, 9, key);
+int high = sizeof(arr)/sizeof(arr[1]);
+int result = binary_search(arr , 0, high-1, key);
 printf("\nThe answer is found at index no: %d\n", result);
 }
