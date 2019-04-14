@@ -1,49 +1,52 @@
-#include<stdio.h>
-int main(int argc, char const *argv[]) {
-    int n1, n2,temp;
-  printf("Enter the number of elements in the first array\n");
-  scanf("%d", &n1);
-  int a1[n1], sum[n1], carry = 0;
-  int result[n1+1];
-  printf("Enter the values of the first array\n");
-  for (int i = 0; i < n1; i++) {
-    scanf("%d", &a1[i]);
-  }
-  printf("Enter the number of elements in the second array\n");
-  scanf("%d", &n2);
-  int a2[n2];
-  printf("Enter the values of the second array\n");
-  for (int i = 0; i < n2; i++) {
-    scanf("%d", &a2[i]);
-  }
-  for (int i = n1-1; i >= 0; i--) 
-  {
-  	if(carry==1)
-  		result[i] = a1[i] + a2[i]+1;
-    else
-    result[i] = a1[i] + a2[i];
-    temp = result[i]%10;
-    if ((result[i]/10)==1)
-    {
-    	carry = 1;
-    }
-    result[i] = temp;
+/*
 
-  }
-  result[0]= 5;
-  //for the carry in the most significant place
-  if (carry==1)
+We are adding the individual elements of the array one by one and then if there is a carry ,
+we add it to the element in the previous block.
+PROBLEMS:
+    1. we are considering that the arrays are of same length.
+    2. Not calculating the time complexity.
+*/
+
+#include <stdio.h>
+int main(int argc, char const *argv[])
+{
+  //For obtaining the element in the arrays
+  int N1,N2,sumd = 0,carry = 0;
+  printf("Enter the number of elements in the first array: \t");
+  scanf("%d",&N1);
+  printf("Enter the number of elements in the Second array: \t");
+  scanf("%d",&N2);
+  int array1[N1],array2[N2],sum[N1];
+  printf("Enter the values of the first array\n");
+  for (int i = 0; i < N1; ++i)
   {
-  	result[1]= (result[1]+1)%10;
-  	if (result[1]/10==1)
-  	{
-  		result[0] = 1;
-  	}
+    scanf("%d",&array1[i]);
   }
-  //for printing the array
-  for (int i = 0; i < n1; i++) {
-    printf("%d\t", result[i]);
+  printf("Enter the values of the Second array\n");
+  for (int i = 0; i < N2; ++i)
+  {
+    scanf("%d",&array2[i]);
   }
-  
+  //NOW, Adding the value of the arrays
+  for (int i = N1-1; i >=0; --i)
+  {
+    sumd = array1[i]+array2[i]+carry;
+    if(sumd>9){
+      sumd = sumd%10;
+      sum[i] = sumd;
+      carry = 1;
+    }
+    else
+    {
+      sum[i] = sumd;
+      carry = 0;
+    }
+  }
+  //Now, we print the array
+  printf("The summed array is :\t");
+  for (int i = 0; i < N1; ++i)
+  {
+    printf("%d\t", sum[i]);
+  }
   return 0;
 }
