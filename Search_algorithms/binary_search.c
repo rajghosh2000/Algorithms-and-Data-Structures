@@ -10,6 +10,9 @@ The current problems in the program is ,
 */
 
 //......................binary_search.............................//
+
+
+
 int binary_search(int arr[], int low, int high, int key){
 while(low <= high)
 {

@@ -6,6 +6,7 @@
  - queues
  	These are similar to Stacks ,but they follow the FIFO(First in First Out) Principle, just like what happens when we stand in queues in the real life situations.
  - linked lists
+ 	they are connected data structures.
     - single linked list 
     - double linked list 
     - circular linked list

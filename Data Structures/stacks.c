@@ -3,8 +3,7 @@ void pop(int a[], int *top);
 void push(int value, int a[], int *top);
 #define MAX 100
 
-
-   int main(int argc, char const *argv[])
+int main(int argc, char const *argv[])
 {
   
     int n,x,a[MAX],top,value;

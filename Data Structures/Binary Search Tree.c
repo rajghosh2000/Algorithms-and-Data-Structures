@@ -1,11 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
-typedef struct node {
+typedef struct node 
+{
     int data;
     struct node * left;
     struct node * right;
 } node ;
+
 node * createNode(int n);
+
 int main(int argc, char const *argv[])
 {
     int n;
