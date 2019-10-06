@@ -10,4 +10,5 @@
     - single linked list 
     - double linked list 
     - circular linked list
-Use the Hacktoberfest and populate the algorithms and data structures and give a pull request and get your tee.
+Use the Hacktoberfest and populate the algorithms and data structures and earn a merged pull request .
+
