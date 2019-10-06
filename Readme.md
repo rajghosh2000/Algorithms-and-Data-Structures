@@ -1,4 +1,4 @@
-# Data Structures in C
+# Data Structures in C 
 ---
 ### Collection of Elementary Data Structures coded in c:
  - Stacks:
@@ -10,3 +10,4 @@
     - single linked list 
     - double linked list 
     - circular linked list
+Use the Hacktoberfest and populate the algorithms and data structures and give a pull request and get your tee.
